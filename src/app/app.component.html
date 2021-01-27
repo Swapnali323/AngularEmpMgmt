@@ -1,0 +1,45 @@
+<h1>{{title}}</h1>
+<h2>{{somedata}}</h2>
+<h3>Employee Data</h3>
+<table border=2>
+  
+<tr *ngFor="let e of employeelist" style="margin-bottom:10px;">
+  <td>{{e.id}}. {{e.fname}} {{e.lname}} {{e.birthday}}</td>
+
+</tr>
+</table>
+<hr>
+<h3>Add</h3>
+<table border=2>
+<input type="text" #id placeholder="id"/><br>
+<input type="text" #fname placeholder="fname"/><br>
+<input type="text" #lname placeholder="lname"/><br>
+<input type="text" #birthday placeholder="birthday"/><br>
+<button (click)="addEmployee(id.value,fname.value,lname.value,birthday.value)">Add</button>
+</table>
+<hr>
+<!-- <h3>Delete</h3>
+<table border=2>
+  <tr *ngFor="let employee of employeelist" style="margin-bottom:10px;">
+    <td>{{employee.id}}</td>
+    <td>{{employee.fname}}</td>
+    <td>{{employee.lname}}</td>
+    <td>{{employee.birthday}}</td>
+    <td><button (click)="deleteEmployee(Employee)">Delete</button></td>
+  </tr>
+</table>
+  <hr>
+  <h3>Update</h3>
+ <table border=2>
+ <tr *ngFor="let employee of Employees" style="margin-bottom:10px;">
+  <td>{{employee.id}}</td>
+ <!-- <td>{{employee.name}}</td>-->
+  <!-- <td><input #id placeholder="enter id here"></td>
+  <td><input #fname placeholder="enter fname here"></td>
+  <td><input #lname placeholder="enter lname here"></td>
+  <td><input #birthday placeholder="enter birthday here"></td>
+  <td><button (click)="updateEmployee(Employee.id,fname.value,lname.value,birthday.value,Employee)">Update</button></td>
+
+</tr> -->
+
+ <!-- </table> --> -->
